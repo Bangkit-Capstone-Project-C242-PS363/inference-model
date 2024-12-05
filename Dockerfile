@@ -6,9 +6,9 @@ WORKDIR /app
 
 # Install system dependencies for OpenCV
 RUN apt-get update && apt-get install -y \
-    libgl1-mesa-glx \
-    libglib2.0-0 \
-    && rm -rf /var/lib/apt/lists/*
+  libgl1-mesa-glx \
+  libglib2.0-0 \
+  && rm -rf /var/lib/apt/lists/*
 
 # Upgrade pip
 RUN pip install --no-cache-dir --upgrade pip
@@ -23,7 +23,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Make port 8765 available to the world outside this container
-EXPOSE 8765
+EXPOSE 8080
 
 # Set environment variables
 ENV PYTHONUNBUFFERED=1
