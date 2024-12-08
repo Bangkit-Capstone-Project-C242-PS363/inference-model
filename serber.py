@@ -12,7 +12,7 @@ import base64
 tf.keras.config.enable_unsafe_deserialization()
 
 class EnhancedHandGestureWebSocketServer:
-    def __init__(self, model_path='mp_based.keras', scaler_path='feature_scaler.pkl', host='0.0.0.0', port=8765):
+    def __init__(self, model_path='mp_based.keras', scaler_path='feature_scaler.pkl', host='0.0.0.0', port=8080):
         """Initialize the WebSocket server with enhanced hand gesture recognition capabilities"""
         # Initialize MediaPipe components
         self.mp_hands = mp.solutions.hands
